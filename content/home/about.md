@@ -17,10 +17,10 @@ weight = 40
   ]
 
 # List your qualifications (such as academic degrees).
-[[education.courses]]
-  course = "BE in Electronics and Communication"
-  institution = "PSG College of Technology"
-  year = 2005
+#[[education.courses]]
+#  course = "BE in Electronics and Communication"
+#  institution = "PSG College of Technology"
+#  year = 2005
 
 +++
 

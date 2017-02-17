@@ -164,7 +164,7 @@ paramter in tempaltes.
 
 ### Complete List of SR-IOV Template Parameters
 
-Create File ``/home/stack/sriov-environment.yaml`` with below contents
+Create a file ``/home/stack/sriov-environment.yaml`` with below contents
 modified to your environment:
 ``` yaml
 parameter_defaults:

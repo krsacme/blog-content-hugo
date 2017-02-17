@@ -1,4 +1,4 @@
-baseurl = "https://krsacme.com"
+baseurl = "http://krsacme.com"
 title = "saravanan kr"
 copyright = "&copy; 2017 Saravanan KR"
 theme = "academic"
