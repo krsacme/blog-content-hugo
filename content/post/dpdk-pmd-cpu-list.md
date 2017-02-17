@@ -1,12 +1,15 @@
 +++
-Categories = ["TripleO","DPDK"]
-date = "2016-12-20T17:05:52+05:30"
+date = "2017-02-17T12:00:00"
+draft = false
+tags = ["tripleo", "dpdk"]
 title = "DPDK - Assigning CPUs for Poll Mode Driver (PMD)"
-Tags = ["TripleO","DPDK"]
-#Description = "Blog details the steps involved in deciding the DPDK PMD CPUs"
-menu = "main"
+math = true
+summary = """ 
+Deploymenet parameter details for deploying DPDK with TripleO.
+"""
 
 +++
+
 OVS-DPDK is a critical requirement in the NFV world with OpenStack. TripleO
 has integrated the deployment of OVS-DPDK with the newton release, till then
 it used to be a manual step post deployment. There are a list of parameter

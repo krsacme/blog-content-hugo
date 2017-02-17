@@ -1,59 +1,180 @@
-languageCode = "en-us"
-title = "Blog"
-baseurl = "https://krsacme.github.io/krsacme/"
-theme = "hyde-y"
+baseurl = "https://krsacme.com"
+title = "saravanan kr"
+copyright = "&copy; 2017 Saravanan KR"
+theme = "academic"
+enableEmoji = true
+footnotereturnlinkcontents = "<sup>^</sup>"
 
-[author]
-  name = "Saravanan KR"
-  email = "krsacme@gmail.com"
+# Enable comments by entering your Disqus shortname
+disqusShortname = ""
 
+# Enable analytics by entering your Google Analytics tracking ID
+googleAnalytics = ""
 
-# All parameters below here are optional and can be mixed and matched.
-#
-[params]
-  # You can use markdown here.
-  brand = "krsacme"
-  topline = "blog on my technical learnings"
-  #footline = "code with <i class='fa fa-heart'></i>"
-
-  # Sidebar position
-  # false, true, "left", "right"
-  sidebar = "right"
-
-  # Text for the top menu link, which goes the root URL for the site.
-  # Default (if omitted) is "Home".
-  home = "Home"
-
-  # Select a syntax highight.
-  # Check the static/css/highlight directory for options.
-  highlight = "default"
-
-  # Google Analytics.
-  #googleAnalytics = "Your Google Analytics tracking code"
-
-  # Sidebar social links.
-  github = "krsacme/blog-site" # Your Github profile ID
-  bitbucket = "" # Your Bitbucket profile ID
-  linkedin = "krsacme" # Your LinkedIn profile ID (from public URL)
-  googleplus = "" # Your Google+ profile ID
-  facebook = "" # Your Facebook profile ID
-  twitter = "" # Your Twitter profile ID
-  youtube = ""  # Your Youtube channel ID
-  flattr = ""  # populate with your flattr uid
-  flickr = "" # Your Flickr profile ID
-  vimeo = "" # Your Vimeo profile ID
-
-  # Sidebar RSS link: will only show up if there is a RSS feed
-  # associated with the current page
-  #rss = true
+# Default language to use (if you setup multilingual support)
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
 
 [blackfriday]
-  angledQuotes = true
-  fractions = false
-  hrefTargetBlank = false
-  latexDashes = true
-  plainIdAnchors = true
-  extensions = []
-  extensionmask = []
+  hrefTargetBlank = true
 
+[params]
+  name = "Saravanan KR"
+  role = "Software Engineer"
+  organization = "Red Hat India Pvt. Ltd."
+  organization_url = "www.redhat.com"
+  avatar = "portrait.jpg"
+  email = "krsacme@gmail.com"
+  address = "India"
+  #office_hours = "Monday 10:00 to 13:00 or email for appointment"
+  #phone = "888 888 88 88"
+  #skype = "krsacme"
+  telegram = ""
 
+  # Enable Keybase in Contact section by entering your keybase.io username.
+  keybase = ""
+
+  # Date format (refer to Go's date format: http://flippinggodateformat.com )
+  #   Examples: "Mon, Jan 2, 2006" or "2006-01-02"
+  date_format = "Mon, Jan 2, 2006"
+
+  # Enable global LaTeX math rendering?
+  #   If false, you can enable it locally on a per page basis.
+  math = false
+
+  # Highlight.js options
+  #   highlight
+  #     Enable global source code highlighting?  If false, you can
+  #     override it for a particular page in that page's preamble.
+  #
+  #     Example: highlight = true
+  #
+  #   highlight_languages
+  #     Add support for highlighting additional languages. Support for
+  #     languages mentioned here will be included in all pages. You
+  #     can also set this variable for a particular page in that
+  #     page's preamble.
+  #
+  #     Example: highlight_languages = ["go", "lisp", "ocaml"]
+  #
+  #   highlight_style
+  #     Choose a different CSS style for highlighting source
+  #     code. Setting this option in a page's preamble has no
+  #     effect.
+  #
+  #     Example: highlight_style = "github-gist"
+  #
+  #   highlight_version
+  #     Choose the version of highlight.js you want. Setting this
+  #     option in a page's preamble has no effect.
+  #
+  #     Example: highlight_version = "9.9.0"
+  #
+  #   For the list of supported languages, styles, and versions, see:
+  #   https://cdnjs.com/libraries/highlight.js/
+  #
+  #   For more info on the highlighting options, see:
+  #   https://gcushen.github.io/hugo-academic-demo/post/writing-markdown-latex/#highlighting-options
+  highlight = true
+  highlight_languages = ['yaml']
+  highlight_style = "atom-one-dark"
+  highlight_version = "9.9.0"
+
+  # Enable native social sharing buttons?
+  sharing = true
+
+  # Link custom CSS and JS assets
+  #   (relative to /static/css and /static/js respectively)
+  custom_css = []
+  custom_js  = []
+
+  # Publication types.
+  #   Used to categorize publications.
+  #   The index of the publication type in the list is used as its unique numerical identifier.
+  #   The numeric ID is used in a publication's frontmatter to categorize it.
+  #   The language can be edited below.
+  #   For multi-lingual sites, copy this block to each language section at the end of this file.
+  publication_types = [
+    'Uncategorized',  # 0
+    'Conference proceedings',  # 1
+    'Journal',  # 2
+    'Work in progress',  # 3
+    'Technical report',  # 4
+    'Book',  # 5
+    'Book chapter'  # 6
+  ]
+
+  # Social/Academic Networking
+  #
+  # Icon pack "fa" includes the following social network icons:
+  #
+  #   twitter, weibo, linkedin, github, facebook, pinterest, google-plus,
+  #   youtube, instagram, soundcloud
+  #
+  #   For email icon, use "fa" icon pack, "envelope" icon, and
+  #   "mailto:your@email.com" as the link.
+  #
+  #   Full list: https://fortawesome.github.io/Font-Awesome/icons/
+  #
+  # Icon pack "ai" includes the following academic network icons:
+  #
+  #   google-scholar, arxiv, orcid, researchgate, mendeley
+  #
+  #   Full list: https://jpswalsh.github.io/academicons/
+
+  [[params.social]]
+    icon = "envelope"
+    icon_pack = "fa"
+    link = "mailto:krsacme@gmail.org"
+
+  [[params.social]]
+    icon = "twitter"
+    icon_pack = "fa"
+    link = "//twitter.com/krsacme"
+
+  [[params.social]]
+    icon = "github"
+    icon_pack = "fa"
+    link = "//github.com/krsacme"
+
+  [[params.social]]
+    icon = "linkedin"
+    icon_pack = "fa"
+    link = "//www.linkedin.com/in/krsacme"
+
+  [[params.social]]
+    icon = "youtube"
+    icon_pack = "fa"
+    link = "//www.youtube.com/channel/UClXYOtWJ34cyYnQmuMsJ4Nw"
+
+# Navigation Links
+#   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
+#     desired widget in your `content/home/` folder.
+#   The weight parameter defines the order that the links will appear in.
+
+[[menu.main]]
+  name = "Posts"
+  url = "#posts"
+  weight = 2
+
+[[menu.main]]
+  name = "Home"
+  url = "#home"
+  weight = 1
+
+[[menu.main]]
+  name = "About"
+  url = "#about"
+  weight = 5
+
+[[menu.main]]
+  name = "Contact"
+  url = "#contact"
+  weight = 10
+
+# Languages
+#   Create a [languages.X] block for each language you want, where X is the language ID.
+
+# Configure the English version of the website.
+[languages.en]
+  languageCode = "en-us"
