@@ -6,10 +6,10 @@ enableEmoji = true
 footnotereturnlinkcontents = "<sup>^</sup>"
 
 # Enable comments by entering your Disqus shortname
-disqusShortname = ""
+#disqusShortname = "http-www-krsacme-com"
 
 # Enable analytics by entering your Google Analytics tracking ID
-googleAnalytics = ""
+googleAnalytics = "UA-92581016-1"
 
 # Default language to use (if you setup multilingual support)
 defaultContentLanguage = "en"

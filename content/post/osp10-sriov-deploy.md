@@ -1,9 +1,9 @@
 +++
-date = "2017-02-17T12:00:00"
+date = "2017-02-17T12:10:00"
 draft = false
 tags = ["tripleo", "sriov"]
 title = "SR-IOV Deployment steps for Tripleo (Newton RHOSP10)"
-math = true
+math = false
 summary = """
 Deploymenet details for deploying SR-IOV with TripleO.
 """
@@ -39,12 +39,12 @@ succesfully deployment.
 
 Following are the list of parameters which needs to be configured addit
 
-* [NeutronSupportedPCIVendorDevs](#NeutronSupportedPCIVendorDevs)
-* [NeutronPhysicalDevMappings](#NeutronPhysicalDevMappings)
-* [NeutronSriovNumVFs](#NeutronSriovNumVFs)
-* [NovaPCIPassthrough](#NovaPCIPassthrough)
+* [NeutronSupportedPCIVendorDevs](#neutronsupportedpcivendordevs)
+* [NeutronPhysicalDevMappings](#neutronphysicaldevmappings)
+* [NeutronSriovNumVFs](#neutronsriovnumvfs)
+* [NovaPCIPassthrough](#novapcipassthrough)
 * [NovaSchedulerDefaultFilters](#novaschedulerdefaultfilters)
-* [NovaSchedulerAvailableFilters](#NovaSchedulerAvailableFilters)
+* [NovaSchedulerAvailableFilters](#novascheduleravailablefilters)
 
 
 ##### NeutronSupportedPCIVendorDevs
