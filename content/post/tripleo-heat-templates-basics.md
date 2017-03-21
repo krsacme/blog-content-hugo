@@ -5,7 +5,7 @@ tags = ["tripleo", "heat", "templates"]
 highlight = true
 math = false
 summary = """
-Basic explanation of the Tripleo Heat Templates and its structure.
+Basic explanation of the TripleO Heat Templates and its structure.
 """
 [header]
   image = ""
@@ -13,11 +13,11 @@ Basic explanation of the Tripleo Heat Templates and its structure.
 
 +++
 
-TripleO deployment is primarirly based on Heat orchestration to co-ordiates
-the creation and deployment of differenet resources an OpenStack cluster
+TripleO deployment is primarily based on Heat orchestration to co-ordinates
+the creation and deployment of different resources an OpenStack cluster
 deployment. TripleO is a feature rich installer, which is highly customizable
-for specici requirements and hardware dependency. This post is going to
-explain the usage of Heat tempaltes in TripleO installer.
+for specific requirements and hardware dependency. This post is going to
+explain the usage of Heat templates in TripleO installer.
 
 ## Heat Orchestration Templates (HOT) Format
 
@@ -45,13 +45,14 @@ conditions:
   # declaration of conditions
 ```
 
-The explation of each section and its functionalities can be found in the [HOT
+The explanation of each section and its functionalities can be found in the [HOT
 Spec][1].
 
 ### Types of Resources
   * Heat Pre-defined Resource Type - Example: ```OS::Heat::SoftwareConfig```
 
-  * OpenStack specific Pre-defined Resource Type - Example: ```OS::Nova::Server```
+  * OpenStack specific Pre-defined Resource Type - Example:
+    ```OS::Nova::Server```
 
   * Custom Resource Type - Example: ```OS::TripleO::Network::External```. It
     will reference to another heat template file itself, a kind of nested
@@ -66,7 +67,7 @@ feature association with any node instead of static association, it brings in
 the requirement of defining the heat resources dynamically for a deployment.
 For this dynamic heat resource definition, Jinja templating engine is used to
 define the heat resources based on the role definition. More about the
-detailed explation of composable roles and its entities will be explained in
+detailed explanation of composable roles and its entities will be explained in
 following posts.
 
 
@@ -77,38 +78,66 @@ Top-level heat template file for TripleO deployment. This file contains the
 ```overcloud``` stack definition template.
 
 ### overcloud-resource-registry-puppet.j2.yaml
-Custom resource type defintion of TripleO heat templates are listed in this
+Custom resource type definition of TripleO heat templates are listed in this
 file. Note, that deployer can define their own custom type which can be
-associated with any file or pre-define resoure and provide as input to the
+associated with any file or pre-define resource and provide as input to the
 deployment.
 
 ### roles_data.yaml
-A file which contains the roles and its defintion. This file need to be
-customized inorder to define the customized roles for a deployment. Each role
+A file which contains the roles and its definition. This file need to be
+customized in order to define the customized roles for a deployment. Each role
 is associated with a set of features (services), which are pre-defined.
 
 ### ```environments``` directory
 Adding a feature in TripleO deployment involves defining the custom heat
-resource type and the required parameters for the features. An enviroment file
+resource type and the required parameters for the features. An environment file
 is provided for each feature available with TripleO installer in this
-``environments`` directory. Deployers can use this environment file during the
+``environments`` directory. Deployer can use this environment file during the
 plan creation (stack deployment).
 
 
 ## Understanding Nested Templates in TripleO
-TripleO intiates the heat stack deployment with a top level template
+TripleO initiates the heat stack deployment with a top level template
 ```overcloud.j2.yaml``` which is of Jinja template. Before the heat stack
 creation, all the ```.j2.yaml``` files in the templates folder will be applied
 to Jinja templating with the input from the ```roles_data.yaml``` file (which
 contains the role definition).
 
-Lets take an example to understand the nested stacks. The resource
-```Networks``` is defined as custom heat resource type
-```OS::TripleO::Networks``` in the top level template file
-```overcloud.j2.yaml```. This custom resource type is mapped to a heat
-template file ```network/networks.yaml``` in the resource registry file. This
-will create a nested stack under the resource ```Networks``` with stack name
-as ```overcloud-Networks-xxxxxx```.
+Then the top-level stack creation is initiated which will build all the
+resources of this stack. Based on the resources types, the corresponding
+action will be taken by the heat engine. In case of custom resource types, the
+associated templates file to the resource type will be created as a nested
+stack to the resource and the parent stack which has this resource.
+
+### Sample Stack Output Tree
+Lets take an example to understand the nested stacks.
+
+```yaml
+overcloud:
+  resources:
+    Networks:
+      type: OS::TripleO::Network
+      stacks:
+        overcloud-Networks-f53ijhkio762:
+          resources:
+            ExternalNetwork:
+              type: OS::TripleO::Network::External
+              stacks:
+                overcloud-Networks-f53ijhkio762-ExternalNetwork-h5w3sdi4wzbm:
+                  resources:
+                    ExternalNetwork:
+                      type: OS::Neutron::Net
+                    ExternalSubnet:
+                      type: OS::Neutron::Subnet
+```
+
+The top level stack is named as ```overcloud``` which is represened by the
+file ```overcloud.j2.yaml```, which contains lots of resources under its
+definitiong. Lets take one of the resource, ```Networks```, whic is defined as
+custom heat resource type ```OS::TripleO::Networks```. This custom resource
+type is mapped to a heat template file ```network/networks.yaml``` in the
+resource registry file. This will create a nested stack under the resource
+```Networks``` with stack name as ```overcloud-Networks-xxxxxx```.
 
 This nested stack, which is in the second level, contains multiple resource
 defined in the template file, as ExternalNetwork, TenantNetwork,
@@ -116,7 +145,7 @@ InternalNetwork, etc,. Consider the resource ```ExternaleNetwork```, which is
 also a custom heat resource type, which is defined in the registry file as
 ```OS::TripleO::Network::External```. This resource type can be be mapped to
 different template files based on the type of the deployment based on IPV4 or
-IPv6. For IPv4 deployment, the template file ```enviroments/network-
+IPv6. For IPv4 deployment, the template file ```environments/network-
 isolation.yaml``` provides the mapping to this custom type of the template
 file ```network/external.yaml```. This template file will create a nested
 stack under the resource ```ExternalNetwork``` with stack name as
@@ -129,23 +158,6 @@ the resource ```ExternalNetwork```, which is a heat defined resource type
 resource definition is embedded with in the heat engine.
 
 
-### Sample Stack Output Tree
-```yaml
-  Networks:
-    type: OS::TripleO::Network
-    stacks:
-      overcloud-Networks-f53ijhkio762:
-        resources:
-          ExternalNetwork:
-            type: OS::TripleO::Network::External
-            stacks:
-              overcloud-Networks-f53ijhkio762-ExternalNetwork-h5w3sdi4wzbm:
-                resources:
-                  ExternalNetwork:
-                    type: OS::Neutron::Net
-                  ExternalSubnet:
-                    type: OS::Neutron::Subnet
-```
 
 ### Useful Commands
 
