@@ -8,6 +8,10 @@ summary = """
 Deploymenet details for deploying SR-IOV with TripleO.
 """
 
+[author]
+  DisplayName = "Saravanan KR"
+  Link = "krsacme"
+
 +++
 
 Red Hat OpenStack Platform v10 can be deployed via OSP-director by enabling
@@ -39,38 +43,13 @@ succesfully deployment.
 
 Following are the list of parameters which needs to be configured addit
 
-* [NeutronSupportedPCIVendorDevs](#neutronsupportedpcivendordevs)
 * [NeutronPhysicalDevMappings](#neutronphysicaldevmappings)
 * [NeutronSriovNumVFs](#neutronsriovnumvfs)
 * [NovaPCIPassthrough](#novapcipassthrough)
 * [NovaSchedulerDefaultFilters](#novaschedulerdefaultfilters)
 * [NovaSchedulerAvailableFilters](#novascheduleravailablefilters)
+* [NeutronSupportedPCIVendorDevs](#neutronsupportedpcivendordevs)
 
-
-##### NeutronSupportedPCIVendorDevs
-
-This parameter contains the list of vendor id and product id of the **Virtual
-Function (VF)** which will be used for SR-IOV deployment. Usually deployers
-make a mistake of assuming this as a the vendor and product id of the Physical
-Function (PF) which is not the case. As of now there is no straighforward way
-to identify these ids. Either we should get this information from nic vendor
-or we have exeucute below command in one of the node which used for
-deployment:
-
-``` bash
-   echo "1" > /sys/class/net/<interface>/device/sriov_numvfs
-   lspci -nn  | grep -i 'network\|ether'
-```
-
-The corresponding parameter in neutron ``supported_pci_vendor_devs`` has been
-deprected in Newton (OSP10). This parameter and its corresponding check has
-been removed in Ocata (OSP11). So this is only a short term trouble in OSP10.
-
-Example:
-``` yaml
-parameter_defaults:
-  NeutronSupportedPCIVendorDevs: ['8086:154c','8086:10ca','8086:1520']
-```
 
 ##### NeutronPhysicalDevMappings
 
@@ -153,6 +132,27 @@ parameter_defaults:
 ``` yaml
 parameter_defaults:
   NovaSchedulerAvailableFilters: ["nova.scheduler.filters.all_filters","nova.scheduler.filters.pci_passthrough_filter.PciPassthroughFilter"]
+```
+
+##### NeutronSupportedPCIVendorDevs
+
+**This parameter id deprecated in OSP10.** This parameter contains the list of
+vendor id and product id of the **Virtual Function (VF)** which will be used
+for SR-IOV deployment. Usually deployers make a mistake of assuming this as a
+the vendor and product id of the Physical Function (PF) which is not the case.
+As of now there is no straighforward way to identify these ids. Either we
+should get this information from nic vendor or we have exeucute below command
+in one of the node which used for deployment:
+
+``` bash
+   echo "1" > /sys/class/net/<interface>/device/sriov_numvfs
+   lspci -nn  | grep -i 'network\|ether'
+```
+
+Example:
+``` yaml
+parameter_defaults:
+  NeutronSupportedPCIVendorDevs: ['8086:154c','8086:10ca','8086:1520']
 ```
 
 _Note:_

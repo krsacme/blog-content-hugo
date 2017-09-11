@@ -11,6 +11,10 @@ Basic explanation of the TripleO Heat Templates and its structure.
   image = ""
   caption = ""
 
+[author]
+  DisplayName = "Saravanan KR"
+  Link = "krsacme"
+
 +++
 
 TripleO deployment is primarily based on Heat orchestration to co-ordinates
