@@ -22,6 +22,7 @@ Enterprise deployment or NFV deploymnet, "Provider Network" is an integral
 part of it. Any consultant who works on a production deployment, will
 eventually come across it. Here I am posting my understanding of Provider
 Networks, as I understood it from experts.
+<!--more-->
 
 ## What is a "Provider Network"?
   * Provider network is external to the OpenStack cluster, which should be

@@ -18,6 +18,7 @@ Red Hat OpenStack Platform v10 can be deployed via OSP-director by enabling
 SR- IOV on the compute overcloud nodes. This post is going to detail the steps
 involved in this deployment, along with other required details of SR-IOV
 deployment.
+<!--more-->
 
 The following list of changes has to be added on top of the usual OSP10
 deployment in order to enable SR-IOV in compute nodes. Here we are going

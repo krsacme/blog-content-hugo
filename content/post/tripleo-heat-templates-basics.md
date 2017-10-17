@@ -22,6 +22,7 @@ the creation and deployment of different resources an OpenStack cluster
 deployment. TripleO is a feature rich installer, which is highly customizable
 for specific requirements and hardware dependency. This post is going to
 explain the usage of Heat templates in TripleO installer.
+<!--more-->
 
 ## Heat Orchestration Templates (HOT) Format
 
