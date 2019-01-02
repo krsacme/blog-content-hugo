@@ -1,7 +1,7 @@
 baseurl = "http://krsacme.com"
 title = "Saravanan KR"
 copyright = "&copy; 2017 Saravanan KR"
-theme = "academic"
+theme = "hugo-bootstrap-mmrath"
 enableEmoji = true
 footnotereturnlinkcontents = "<sup>^</sup>"
 
@@ -154,17 +154,17 @@ defaultContentLanguageInSubdir = false
 
 [[menu.main]]
   name = "Home"
-  url = "#posts"
+  url = "/"
   weight = 1
 
 [[menu.main]]
   name = "About"
-  url = "#about"
+  url = "/page/about"
   weight = 5
 
 [[menu.main]]
   name = "Contact"
-  url = "#contact"
+  url = "/page/contact"
   weight = 10
 
 # Languages

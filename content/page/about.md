@@ -24,7 +24,15 @@ weight = 40
 
 +++
 
-# Biography
+## Biography
 
 Saravanan KR is working in Red Hat as a Software Engineer.
 
+<div class="text-center">
+  <a class="btn btn-social-icon btn-lg btn-github" href="https://github.com/krsacme/">
+    <span class="fa fa-github"></span>
+  </a>
+  <a class="btn btn-social-icon btn-lg btn-envelope" href="mailto:krs.acme@gmail.com">
+    <span class="fa fa-envelope"></span>
+  </a>
+</div>

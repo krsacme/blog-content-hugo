@@ -1,5 +1,5 @@
 +++
-date = "2017-09-13T14:57:16+05:30"
+date = "2017-10-16T14:57:16+05:30"
 title = "TripleO Container - Template Configs (Pike)"
 tags = ["openstack","tripleo", "container"]
 highlight = true
