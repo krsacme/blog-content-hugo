@@ -5,7 +5,7 @@ tags = ["tripleo", "dpdk"]
 title = "DPDK - Assigning CPUs for Poll Mode Driver (PMD)"
 math = true
 summary = """
-Deploymenet parameter details for deploying DPDK with TripleO.
+Deployment parameter details for deploying DPDK with TripleO.
 """
 
 [author]
