@@ -28,7 +28,7 @@ is used for OvS-DPDK, instead of the default `Compute` role.
 
 In newton, the OvS-DPDK service definition is in
 `puppet/services/neutron-ovs-dpdk-agent.yaml` file. And in queens, with the
-implementation of containers, the containerized version of the Ovs-DPDK
+implementation of containers, the containerized version of the OvS-DPDK
 service definition has to be used, which is available in file
 `docker/services/neutron-ovs-dpdk-agent.yaml`.
 
@@ -47,13 +47,13 @@ OvS-DPDK service registry. A sample user registry environment could look like:
 
 ```yaml
 resource_registry:
-  'OS::TripleO::Services::ComputeNeutronOvsDpdkAgent':
+  'OS::TripleO::Services::ComputeNeutronOvsDpdkAgentCustom':
     /usr/share/openstack-tripleo-heat-templates/puppet/services/neutron-ovs-dpdk-agent.yaml
 ```
 
 In the above user's environment file, a new registry has been added as
-`OS::TripleO::Services::ComputeNeutronOvsDpdkAgent`, which has to be added
-to the custom role, on which DPDK should be enabled (like
+`OS::TripleO::Services::ComputeNeutronOvsDpdkAgentCustom`, which has to be
+added to the custom role, on which DPDK should be enabled (like
 `ComputeOvsDpdk`).
 
 
@@ -68,14 +68,18 @@ to the existing environment file, mapped to the new service.
 This change is backward in-compatible and it requires upgrades to maintain the
 same old service registry, but it requires to update to the containerized
 version of the service definition. For FFU upgrades, if the user has used a
-custom registry like `ComputeNeutronOvsDpdkAgent`, the same environment file
-has to be updated like below:
+custom registry like `ComputeNeutronOvsDpdkAgentCustom`, the same environment
+file has to be updated like below:
 
 ```yaml
 resource_registry:
-  'OS::TripleO::Services::ComputeNeutronOvsDpdkAgent':
+  'OS::TripleO::Services::ComputeNeutronOvsDpdkAgentCustom':
     /usr/share/openstack-tripleo-heat-templates/docker/services/neutron-ovs-dpdk-agent.yaml
 ```
+
+The name `ComputeNeutronOvsDpdkAgentCustom` is used only as an example, the
+actual service registry name of the newton deployment has to be used instead,
+for a given cluster environment.
 
 ## Using `Compute` Role for OvS-DPDK
 
@@ -83,17 +87,30 @@ This section explains the changes required when OvS-DPDK is enabled on the
 existing `Compute` role itself.
 
 It is also possible to enable OvS-DPDK on the default `Compute` role itself,
-by using the provided environment file (`neutron-ovs-dpdk.yaml`). During the
-upgrade, the same environment file has been updated to the new service
-registry definition instead of `ComputeNeutronOvsAgent`. So, using the default
+by using the provided environment file (`neutron-ovs-dpdk.yaml`). In queens,
+the same environment file has been updated to the new service registry
+definition instead of `ComputeNeutronOvsAgent`. So, using the default
 roles_data file with this environment file will not enable OvS-DPDK. In order
-to fix this, an user environment file with the required registry mapping as
-like newton has to be added (to the containerized service):
+to fix this, user environment file with the required registry mapping as like
+newton has to be added (to the containerized service):
 
 ```yaml
 resource_registry:
   'OS::TripleO::Services::ComputeNeutronOvsAgent':
     /usr/share/openstack-tripleo-heat-templates/docker/services/neutron-ovs-dpdk-agent.yaml
+```
+
+<span style='color:red;'>**_Note:_**</span> In both the cases, ensure that the
+parameter `VhostuserSocketGroup` is configured as `hugetlbfs`, as it is
+mandatory parameter for OvS-DPDK deployment. It has been made as default
+parameter to the OvS-DPDK role in queens, refer to the file
+<b>/usr/share/openstack-tripleo-heat-templates/roles/ComputeOvsDpdk.yaml</b>
+for this parameter. Ensure this parameter is merged accordingly for all
+OvS-DPDK roles or globally like below:
+
+```yaml
+parameter_defaults:
+  VhostuserSocketGroup: hugetlbfs
 ```
 
 ## Kernel Args Configuration

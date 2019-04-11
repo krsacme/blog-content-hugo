@@ -24,11 +24,12 @@ weight = 40
 
 +++
 
-## Biography
-
-Saravanan KR is working in Red Hat as a Software Engineer.
+<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 
 <div class="text-center">
+  <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="horizontal" data-theme="light" data-vanity="krsacme">
+    <a class="LI-simple-link" href='https://in.linkedin.com/in/krsacme?trk=profile-badge'>Saravanan KR</a>
+  </div>
   <a class="btn btn-social-icon btn-lg btn-github" href="https://github.com/krsacme/">
     <span class="fa fa-github"></span>
   </a>
