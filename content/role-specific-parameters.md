@@ -1,4 +1,5 @@
 +++
+type = "post"
 date = "2017-09-11T17:57:16+05:30"
 title = "TripleO Role-Specific Parameters"
 tags = ["openstack","tripleo", "role"]
@@ -9,6 +10,9 @@ math = false
   caption = ""
   image = ""
 
+[author]
+  DisplayName = "Saravanan KR"
+  Link = "krsacme"
 +++
 
 OpenStack installer TripleO provides a flexibility to the operators to define

@@ -5,7 +5,6 @@ title = "Building RHEL Containers with Additional Repositories"
 tags = ["rhel", "containers"]
 highlight = true
 math = false
-author = "Saravanan KR"
 
 [header]
   caption = ""

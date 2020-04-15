@@ -5,7 +5,6 @@ title = "Fast Forward Upgrades with OvS-DPDK"
 tags = ["tripleo", "dpdk", "ffu"]
 highlight = true
 math = false
-author = "Saravanan KR"
 
 [header]
   caption = ""

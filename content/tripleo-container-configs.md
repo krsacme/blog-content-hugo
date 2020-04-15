@@ -1,4 +1,5 @@
 +++
+type = "post"
 date = "2017-10-16T14:57:16+05:30"
 title = "TripleO Container - Template Configs (Pike)"
 tags = ["openstack","tripleo", "container"]
@@ -9,6 +10,9 @@ math = false
   caption = ""
   image = ""
 
+[author]
+  DisplayName = "Saravanan KR"
+  Link = "krsacme"
 +++
 
 In this post, I would like to provide the details of the different types of

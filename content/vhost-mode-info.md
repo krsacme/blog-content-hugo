@@ -5,12 +5,14 @@ title = "OVS-DPDK: Vhostuser socket Mode"
 tags = ["openstack","tripleo", "dpdk", "ovs", "vhost"]
 highlight = true
 math = false
-author = "Saravanan KR"
 
 [header]
   caption = ""
   image = ""
 
+[author]
+  DisplayName = "Saravanan KR"
+  Link = "krsacme"
 +++
 
 In the newton release, the default vhostuser mode in OvS is `dpdkvhostuser`.

@@ -1,12 +1,11 @@
 +++
+type = "post"
 date = "2017-03-12T11:09:14+05:30"
 title = "TripleO Heat Templates - Basics"
 tags = ["tripleo", "heat", "templates"]
 highlight = true
 math = false
-summary = """
-Basic explanation of the TripleO Heat Templates and its structure.
-"""
+
 [header]
   image = ""
   caption = ""

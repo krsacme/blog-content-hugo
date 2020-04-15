@@ -5,7 +5,6 @@ title = "TripleO Containers Patching"
 tags = ["tripleo", "container"]
 highlight = true
 math = false
-author = "Saravanan KR"
 
 [header]
   caption = ""

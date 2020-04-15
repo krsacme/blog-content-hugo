@@ -1,4 +1,5 @@
 +++
+type = "post"
 date = "2017-09-13T14:57:16+05:30"
 title = "TripleO Container - Types"
 tags = ["openstack","tripleo", "container"]
@@ -8,6 +9,10 @@ math = false
 [header]
   caption = ""
   image = ""
+
+[author]
+  DisplayName = "Saravanan KR"
+  Link = "krsacme"
 
 +++
 

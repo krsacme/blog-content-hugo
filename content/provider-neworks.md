@@ -1,4 +1,5 @@
 +++
+type = "post"
 date = "2017-06-05T13:18:22+05:30"
 title = "OpenStack Provider Networks"
 tags = ["openstack","provider", "network"]

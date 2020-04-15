@@ -1,17 +1,18 @@
 +++
+type = "post"
 date = "2017-02-17T12:00:00"
-draft = false
 tags = ["tripleo", "dpdk"]
 title = "DPDK - Assigning CPUs for Poll Mode Driver (PMD)"
-math = true
-summary = """
-Deployment parameter details for deploying DPDK with TripleO.
-"""
+highlight = true
+math = false
+
+[header]
+  caption = ""
+  image = ""
 
 [author]
   DisplayName = "Saravanan KR"
   Link = "krsacme"
-
 +++
 
 OVS-DPDK is a critical requirement in the NFV world with OpenStack. TripleO
