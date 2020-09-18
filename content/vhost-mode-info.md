@@ -1,19 +1,22 @@
-+++
-type = "post"
-date = "2018-06-20T09:00:00+05:30"
-title = "OVS-DPDK: Vhostuser socket Mode"
-tags = ["openstack","tripleo", "dpdk", "ovs", "vhost"]
-highlight = true
-math = false
-
-[header]
-  caption = ""
-  image = ""
-
-[author]
-  DisplayName = "Saravanan KR"
-  Link = "krsacme"
-+++
+---
+author:
+  DisplayName: Saravanan KR
+  Link: krsacme
+date: "2018-06-20T09:00:00+05:30"
+header:
+  caption: ""
+  image: ""
+highlight: true
+math: false
+tags:
+- openstack
+- tripleo
+- dpdk
+- ovs
+- vhost
+title: 'OVS-DPDK: Vhostuser socket Mode'
+type: post
+---
 
 In the newton release, the default vhostuser mode in OvS is `dpdkvhostuser`.
 And from ocata onwards, the default mode in the neutron has been changed to

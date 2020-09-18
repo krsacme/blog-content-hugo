@@ -1,16 +1,17 @@
-+++
-type = "post"
-date = "2019-02-08T09:00:00+05:30"
-title = "Fast Forward Upgrades with OvS-DPDK"
-tags = ["tripleo", "dpdk", "ffu"]
-highlight = true
-math = false
-
-[header]
-  caption = ""
-  image = ""
-
-+++
+---
+date: "2019-02-08T09:00:00+05:30"
+header:
+  caption: ""
+  image: ""
+highlight: true
+math: false
+tags:
+- tripleo
+- dpdk
+- ffu
+title: Fast Forward Upgrades with OvS-DPDK
+type: post
+---
 
 For OvS-DPDK deployments, FFU upgrade from newton (OSP10) to queens (OSP13)
 requires extra care on migrating the templates. Undercloud upgrade procedure

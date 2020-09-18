@@ -1,16 +1,16 @@
-+++
-type = "post"
-date = "2019-04-10T09:00:00+05:30"
-title = "TripleO Containers Patching"
-tags = ["tripleo", "container"]
-highlight = true
-math = false
-
-[header]
-  caption = ""
-  image = ""
-
-+++
+---
+date: "2019-04-10T09:00:00+05:30"
+header:
+  caption: ""
+  image: ""
+highlight: true
+math: false
+tags:
+- tripleo
+- container
+title: TripleO Containers Patching
+type: post
+---
 
 With the support of only container based deployments, it is important to know
 that how to edit files used for development to verify end to end deployment

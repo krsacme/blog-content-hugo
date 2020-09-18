@@ -1,16 +1,16 @@
-+++
-type = "post"
-date = "2019-01-02T09:00:00+05:30"
-title = "Building RHEL Containers with Additional Repositories"
-tags = ["rhel", "containers"]
-highlight = true
-math = false
-
-[header]
-  caption = ""
-  image = ""
-
-+++
+---
+date: "2019-01-02T09:00:00+05:30"
+header:
+  caption: ""
+  image: ""
+highlight: true
+math: false
+tags:
+- rhel
+- containers
+title: Building RHEL Containers with Additional Repositories
+type: post
+---
 
 When building RHEL containers on some scenarios may require to install a
 specific package inside the container from a generic RHEL repository. In such

@@ -5,6 +5,8 @@ theme = "hugo-bootstrap-mmrath"
 enableEmoji = true
 footnotereturnlinkcontents = "<sup>^</sup>"
 
+contentDir = "content"
+
 # Enable comments by entering your Disqus shortname
 disqusShortname = "http-www-krsacme-com"
 

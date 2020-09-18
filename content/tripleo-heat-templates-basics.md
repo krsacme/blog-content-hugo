@@ -1,20 +1,20 @@
-+++
-type = "post"
-date = "2017-03-12T11:09:14+05:30"
-title = "TripleO Heat Templates - Basics"
-tags = ["tripleo", "heat", "templates"]
-highlight = true
-math = false
-
-[header]
-  image = ""
-  caption = ""
-
-[author]
-  DisplayName = "Saravanan KR"
-  Link = "krsacme"
-
-+++
+---
+author:
+  DisplayName: Saravanan KR
+  Link: krsacme
+date: "2017-03-12T11:09:14+05:30"
+header:
+  caption: ""
+  image: ""
+highlight: true
+math: false
+tags:
+- tripleo
+- heat
+- templates
+title: TripleO Heat Templates - Basics
+type: post
+---
 
 TripleO deployment is primarily based on Heat orchestration to co-ordinates
 the creation and deployment of different resources an OpenStack cluster

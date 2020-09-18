@@ -1,19 +1,23 @@
-+++
-type = "post"
-date = "2018-06-20T09:00:00+05:30"
-title = "Newton: Minor Update (OVS-DPDK) - OvS2.9"
-tags = ["openstack","tripleo", "minor", "update", "newton", "dpdk"]
-highlight = true
-math = false
-
-[header]
-  caption = ""
-  image = ""
-
-[author]
-  DisplayName = "Saravanan KR"
-  Link = "krsacme"
-+++
+---
+author:
+  DisplayName: Saravanan KR
+  Link: krsacme
+date: "2018-06-20T09:00:00+05:30"
+header:
+  caption: ""
+  image: ""
+highlight: true
+math: false
+tags:
+- openstack
+- tripleo
+- minor
+- update
+- newton
+- dpdk
+title: 'Newton: Minor Update (OVS-DPDK) - OvS2.9'
+type: post
+---
 
 Newton (OSP10) has seen a variety of OpenvSwitch version supported. Initial
 release was with OvS2.5 and later it has been updated to OvS2.6, which is

@@ -1,19 +1,20 @@
-+++
-type = "post"
-date = "2017-06-05T13:18:22+05:30"
-title = "OpenStack Provider Networks"
-tags = ["openstack","provider", "network"]
-highlight = true
-math = false
-
-[header]
-  caption = ""
-  image = ""
-
-[author]
-  DisplayName = "Saravanan KR"
-  Link = "krsacme"
-+++
+---
+author:
+  DisplayName: Saravanan KR
+  Link: krsacme
+date: "2017-06-05T13:18:22+05:30"
+header:
+  caption: ""
+  image: ""
+highlight: true
+math: false
+tags:
+- openstack
+- provider
+- network
+title: OpenStack Provider Networks
+type: post
+---
 
 As an OpenStack newcomer, I got confused around the concept of "Provider
 Network" on a OpenStack cluster. As many of the core component developers does

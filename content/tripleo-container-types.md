@@ -1,20 +1,20 @@
-+++
-type = "post"
-date = "2017-09-13T14:57:16+05:30"
-title = "TripleO Container - Types"
-tags = ["openstack","tripleo", "container"]
-highlight = true
-math = false
-
-[header]
-  caption = ""
-  image = ""
-
-[author]
-  DisplayName = "Saravanan KR"
-  Link = "krsacme"
-
-+++
+---
+author:
+  DisplayName: Saravanan KR
+  Link: krsacme
+date: "2017-09-13T14:57:16+05:30"
+header:
+  caption: ""
+  image: ""
+highlight: true
+math: false
+tags:
+- openstack
+- tripleo
+- container
+title: TripleO Container - Types
+type: post
+---
 
 In **Pike** release, TripleO container deployment has been completely
 redesigned, in a way that it is backward comptible with _baremetal_ deployment

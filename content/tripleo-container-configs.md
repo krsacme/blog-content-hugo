@@ -1,19 +1,20 @@
-+++
-type = "post"
-date = "2017-10-16T14:57:16+05:30"
-title = "TripleO Container - Template Configs (Pike)"
-tags = ["openstack","tripleo", "container"]
-highlight = true
-math = false
-
-[header]
-  caption = ""
-  image = ""
-
-[author]
-  DisplayName = "Saravanan KR"
-  Link = "krsacme"
-+++
+---
+author:
+  DisplayName: Saravanan KR
+  Link: krsacme
+date: "2017-10-16T14:57:16+05:30"
+header:
+  caption: ""
+  image: ""
+highlight: true
+math: false
+tags:
+- openstack
+- tripleo
+- container
+title: TripleO Container - Template Configs (Pike)
+type: post
+---
 
 In this post, I would like to provide the details of the different types of
 template config sections present in a typical docker service template file.

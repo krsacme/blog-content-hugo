@@ -1,19 +1,19 @@
-+++
-type = "post"
-date = "2017-02-17T12:10:00"
-tags = ["tripleo", "sriov"]
-title = "SR-IOV Deployment steps for Tripleo (Newton RHOSP10)"
-highlight = true
-math = false
-
-[header]
-  caption = ""
-  image = ""
-
-[author]
-  DisplayName = "Saravanan KR"
-  Link = "krsacme"
-+++
+---
+author:
+  DisplayName: Saravanan KR
+  Link: krsacme
+date: 2017-02-17T12:10:00
+header:
+  caption: ""
+  image: ""
+highlight: true
+math: false
+tags:
+- tripleo
+- sriov
+title: SR-IOV Deployment steps for Tripleo (Newton RHOSP10)
+type: post
+---
 
 Red Hat OpenStack Platform v10 can be deployed via OSP-director by enabling
 SR- IOV on the compute overcloud nodes. This post is going to detail the steps

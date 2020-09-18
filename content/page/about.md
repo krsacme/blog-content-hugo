@@ -1,42 +1,31 @@
-+++
-# About/Biography widget.
+---
+date: 2017-02-17T00:00:00
+draft: false
+interests:
+  interests:
+  - OpenStack
+  - TripleO
+weight: 40
+widget: about
+---
 
-date = "2017-02-17T00:00:00"
-draft = false
-
-widget = "about"
-
-# Order that this section will appear in.
-weight = 40
-
-# List your academic interests.
-[interests]
-  interests = [
-    "OpenStack",
-    "TripleO",
-  ]
-
-# List your qualifications (such as academic degrees).
-#[[education.courses]]
-#  course = "BE in Electronics and Communication"
-#  institution = "PSG College of Technology"
-#  year = 2005
-
-+++
-
-<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
-
+<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/e5f9eaa840.js" crossorigin="anonymous"></script>
 <div class="text-center">
 
-  <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="krsacme">
+  <!--div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="krsacme">
     <a class="LI-simple-link" href='https://in.linkedin.com/in/krsacme?trk=profile-badge'>Saravanan KR</a>
-  </div>
+  </div-->
 
-  <a class="btn btn-social-icon btn-lg btn-github" href="https://github.com/krsacme/">
-    <span class="fa fa-github"></span>
+  <a class="" style="font-size: 48px; color: Dodgerblue;" href="https://github.com/krsacme/">
+    <i class="fab fa-linkedin"></i>
   </a>
 
-  <a class="btn btn-social-icon btn-lg btn-envelope" href="mailto:krsacme@gmail.com">
+  <a class="" style="font-size: 48px; color: black;" href="https://github.com/krsacme/">
+    <i class="fab fa-github-square"></i>
+  </a>
+
+  <a class="" style="font-size: 48px; color: grey;" href="mailto:krsacme@gmail.com">
     <span class="fa fa-envelope"></span>
   </a>
 </div>

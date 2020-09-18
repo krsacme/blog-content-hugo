@@ -1,19 +1,20 @@
-+++
-type = "post"
-date = "2017-09-11T17:57:16+05:30"
-title = "TripleO Role-Specific Parameters"
-tags = ["openstack","tripleo", "role"]
-highlight = true
-math = false
-
-[header]
-  caption = ""
-  image = ""
-
-[author]
-  DisplayName = "Saravanan KR"
-  Link = "krsacme"
-+++
+---
+author:
+  DisplayName: Saravanan KR
+  Link: krsacme
+date: "2017-09-11T17:57:16+05:30"
+header:
+  caption: ""
+  image: ""
+highlight: true
+math: false
+tags:
+- openstack
+- tripleo
+- role
+title: TripleO Role-Specific Parameters
+type: post
+---
 
 OpenStack installer TripleO provides a flexibility to the operators to define
 their own custom roles. A custom role can be defined by associating a list of

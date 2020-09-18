@@ -1,19 +1,21 @@
-+++
-type = "post"
-date = "2020-03-15T12:00:00"
-title = "GO: How to mock filesystem code"
-tags = ["golang", "ginkgo", "filesystem", "afero"]
-highlight = true
-math = false
-
-[header]
-  caption = ""
-  image = ""
-
-[author]
-  DisplayName = "Saravanan KR"
-  Link = "krsacme"
-+++
+---
+author:
+  DisplayName: Saravanan KR
+  Link: krsacme
+date: 2020-03-15T12:00:00
+header:
+  caption: ""
+  image: ""
+highlight: true
+math: false
+tags:
+- golang
+- ginkgo
+- filesystem
+- afero
+title: 'GO: How to mock filesystem code'
+type: post
+---
 
 Go code which depends on the file system contents like NUMA nodes, CPUs,
 interfaces associated with NUMA nodes can be tested with multiple ways.
